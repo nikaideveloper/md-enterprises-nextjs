@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { servicesPageData } from '@/config/services';
-
+import Link from "next/link";
 export default function ServicesHero() {
   const { hero } = servicesPageData;
 
@@ -10,7 +10,7 @@ export default function ServicesHero() {
     <section className="relative w-full bg-white overflow-hidden">
       {/* Container: Stacked on mobile (col), Side-by-side on desktop (row) */}
       <div className="max-w-8xl mx-auto flex flex-col lg:flex-row items-stretch min-h-[500px]">
-        
+
         {/* LEFT CONTENT */}
         <div className="flex-1 flex flex-col justify-center px-6 py-12 sm:px-10 lg:px-12 lg:py-16">
           {/* Badge */}
@@ -20,7 +20,7 @@ export default function ServicesHero() {
 
           {/* Title - Responsive font sizes */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0f4c4c] leading-[1.2] mb-6 lg:mb-8">
-           {hero.title}
+            {hero.title}
           </h1>
 
           {/* Decorative Double Line */}
@@ -36,12 +36,19 @@ export default function ServicesHero() {
 
           {/* Buttons - Stack on very small screens, row on sm+ */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4">
-            <button className="bg-[#0f4c4c] text-white px-8 py-4 rounded-md font-bold text-sm shadow-[0_4px_14px_0_rgba(15,76,76,0.39)] hover:bg-[#0a3636] transition-all w-full sm:w-auto">
+            <Link
+              href="#services"
+              className="bg-[#0f4c4c] text-white px-8 py-4 rounded-md font-bold text-sm shadow-[0_4px_14px_0_rgba(15,76,76,0.39)] hover:bg-[#0a3636] transition-all w-full sm:w-auto inline-flex items-center justify-center"
+            >
               {hero.buttons.primary}
-            </button>
-            <button className="bg-[#f8f9fa] text-gray-700 px-8 py-4 rounded-md font-bold text-sm border border-gray-100 shadow-md hover:bg-gray-100 transition-all w-full sm:w-auto">
+            </Link>
+
+            <Link
+              href="/contact"
+              className="bg-[#f8f9fa] text-gray-700 px-8 py-4 rounded-md font-bold text-sm border border-gray-100 shadow-md hover:bg-gray-100 transition-all w-full sm:w-auto inline-flex items-center justify-center"
+            >
               {hero.buttons.secondary}
-            </button>
+            </Link>
           </div>
         </div>
 

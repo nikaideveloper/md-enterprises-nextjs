@@ -2,6 +2,7 @@ import SupportCTA from "@/components/layout/SupportCTA";
 import BabyBandSealingMachine from "@/components/product/BabyBandSealingMachine";
 import FAQSection from "@/components/product/FAQSection";
 import MachineCategories from "@/components/product/MachineCategories";
+import OtherSolutions from "@/components/product/OtherSolutions";
 import ProductHero from "@/components/product/ProductHero";
 import ProductShowcase from "@/components/product/ProductShowcase";
 import VideoDemoSection from "@/components/product/VideoDemoSection";
@@ -21,6 +22,7 @@ export default function ProductPage() {
     <main>
       <ProductHero />
       <ProductShowcase />
+      <OtherSolutions/>
       <FAQSection />
       <VideoDemoSection />
       <SupportCTA />

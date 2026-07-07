@@ -66,7 +66,7 @@ export const footerData = {
       "Flat No. B/602, Kusumkunj Housing Society Ltd., Plot No. 37, Sector No. 20, Near Aishwarya Hotel, Kamothe, Dist.: Raigad, Maharashtra - 410209.",
 
     // Image shows two phone numbers
-    phones: ["+91 9967859485", "+91 9969508110"],
+    phones: ["+91 9967859485", "+91 9757074595"],
 
     email: "info@mdenterprises.in",
 
@@ -81,7 +81,7 @@ export const footerData = {
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com/m_d_enterprisses?igsh=MXBobnZ1Zjg2cWJ4Nw==",
+      href: "https://www.instagram.com/m_d_enterprises_?igsh=bHVmNjBpMHJ5NWpm",
       image: "/icons/instagram.png",
     },
     {

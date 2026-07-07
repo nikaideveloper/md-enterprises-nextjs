@@ -123,7 +123,7 @@ const ContactFormMap = () => {
   );
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12">
+    <section  id="contact-form"  className="max-w-7xl mx-auto px-4 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-200 rounded-sm overflow-hidden shadow-sm">
 
         {/* LEFT SIDE: CONTACT FORM */}

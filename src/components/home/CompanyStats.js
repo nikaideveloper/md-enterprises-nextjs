@@ -35,19 +35,19 @@ export default function CompanyStats() {
   ];
 
   return (
-    <section className="bg-[#f8fafd] py-8 sm:py-10 md:py-12 lg:py-16 px-4 overflow-hidden relative">
+    <section className="bg-[#f8fafd] py-12 sm:py-16 lg:py-24 px-4 overflow-hidden relative">
       <div className="container mx-auto max-w-7xl">
         {/* Header Section - Responsive */}
-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#114232] mb-4 sm:mb-6 leading-tight px-4">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 lg:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#114232] mb-4 sm:mb-6 leading-tight px-2 sm:px-4">
             {companyStats.title}
           </h2>
-          <p className="text-gray-500 text-sm sm:text-base md:text-lg leading-relaxed px-4">
+          <p className="text-gray-500 text-sm sm:text-base md:text-lg leading-relaxed px-2 sm:px-4">
             {companyStats.subtitle}
           </p>
         </div>
 
-        {/* Desktop: Circular Stats Container */}
+        {/* Desktop: Circular Stats Container (Unchanged) */}
         <div className="hidden lg:block relative w-full max-w-[850px] mx-auto h-[600px] xl:h-[650px]">
           {/* Background Concentric Dashed Circles - Desktop Only */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40">
@@ -96,7 +96,7 @@ export default function CompanyStats() {
         </div>
 
         {/* Mobile & Tablet: Stacked/Grid Layout */}
-        <div className="lg:hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
+        <div className="lg:hidden flex flex-wrap justify-center gap-6 sm:gap-8 max-w-4xl mx-auto">
           {companyStats.stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -108,20 +108,20 @@ export default function CompanyStats() {
                 ${cardConfigs[index].bg} 
                 ${cardConfigs[index].text}
                 ${cardConfigs[index].mobileOrder}
-                w-full aspect-square max-w-[280px] mx-auto
-                rounded-full flex flex-col items-center justify-center p-8 sm:p-10 text-center
+                w-full aspect-square max-w-[260px] sm:max-w-[280px] xs:max-w-[240px]
+                rounded-full flex flex-col items-center justify-center p-6 sm:p-10 text-center
                 transition-transform hover:scale-105 active:scale-95 duration-300
                 shadow-lg
               `}
             >
-              <span className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2">
+              <span className="text-4xl sm:text-5xl font-bold mb-2">
                 {stat.number}
               </span>
-              <h3 className="text-sm sm:text-base md:text-lg font-bold mb-2 sm:mb-3 uppercase tracking-wider">
+              <h3 className="text-xs sm:text-sm md:text-base font-bold mb-2 uppercase tracking-wider px-2">
                 {stat.title}
               </h3>
               <p
-                className={`${cardConfigs[index].desc} text-xs sm:text-sm leading-relaxed max-w-[200px]`}
+                className={`${cardConfigs[index].desc} text-[11px] sm:text-xs md:text-sm leading-relaxed max-w-[180px] sm:max-w-[200px]`}
               >
                 {stat.description}
               </p>
@@ -129,7 +129,7 @@ export default function CompanyStats() {
           ))}
         </div>
 
-        {/* Optional: Mobile Background Decoration */}
+        {/* Mobile Background Decoration */}
         <div className="lg:hidden absolute inset-0 pointer-events-none opacity-10 overflow-hidden">
           <div className="absolute top-10 left-5 w-32 h-32 border-2 border-dashed border-[#114232] rounded-full"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 border-2 border-dashed border-[#C6FF71] rounded-full"></div>

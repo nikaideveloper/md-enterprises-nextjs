@@ -50,7 +50,7 @@ export default function ProductHero() {
           {/* Buttons: Stack on mobile, row on desktop */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-4">
             <a 
-              href={hero.buttons.primary.link}
+              href='#all-products'
               className="bg-[#0B3D3D] text-white px-10 py-4 rounded-md font-bold text-sm shadow-lg hover:bg-[#082e2e] transition-all text-center"
             >
               {hero.buttons.primary.text}

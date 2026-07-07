@@ -47,7 +47,7 @@ export const headerData = {
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com/m_d_enterprisses?igsh=MXBobnZ1Zjg2cWJ4Nw==",
+      href: "https://www.instagram.com/m_d_enterprises_?igsh=bHVmNjBpMHJ5NWpm",
       image: "/icons/instagram.png",
     },
     {

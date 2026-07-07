@@ -15,14 +15,17 @@ export const homePageData = {
       {
         image: "/images/Packaging-Machine-1.png",
         alt: "Packaging Machine 1",
+      
       },
       {
         image: "/images/Packaging-Machine-2.png",
         alt: "Packaging Machine 2",
+        
       },
       {
         image: "/images/Packaging-Machine-3.png",
         alt: "Conveyor Packaging Machine",
+        
       },
     ],
   },
@@ -143,7 +146,7 @@ export const homePageData = {
     },
     footerLink: {
       label: "Learn More About Our Process",
-      link: "/process",
+      link: "/products",
     },
     image: {
       src: "/images/precision-quality-banner.png",

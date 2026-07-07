@@ -139,9 +139,9 @@ export const aboutPageData = {
     title: "The Founder",
     description: 
       "We are two young Belgian entrepreneurs, Arnaud & Frédéric. Through our current company, Blue Storks Travel Retail, we connected with Italian workshops at trade shows in Florence, Italy. After our visit at a local vegetable leather tannery in Tuscany, owned by our friend Guiseppe, we were inspired by his craftsmanship and the quality of the materials he used. Thus, we made a promise to invest our time and creativity into working with this inspiring Italian man and his state-of-the-art tannery.",
-    name: "Mr. Dattukaka Pachpute ",
+    name: "Mr. Dattatray Pachpute",
     role: "Co-Founder",
-    image: "/image/man-ceo.avif", 
+    image: "/image/ceo.jpeg", 
   },
 };
 

@@ -31,7 +31,7 @@ export const contactPageData = {
         title: "Phone Numbers",
         details: [
           "+91 9967859485",
-          "+91 9969508110"
+          "+91 9757074595"
         ],
         icon: "/images/phone.png",
         alt: "Phone Icon",

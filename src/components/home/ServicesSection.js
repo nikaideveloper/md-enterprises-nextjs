@@ -10,6 +10,7 @@ import {
   Component, 
   ShieldCheck 
 } from "lucide-react";
+import Link from "next/link";
 
 export default function ServicesSection() {
   const { services } = homePageData;
@@ -25,38 +26,42 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="bg-[#f8fafd] py-10 px-4">
+    <section className="bg-[#f8fafd] py-12 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 leading-tight">
             {services.title}
           </h2>
-          <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+          <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
             {services.subtitle}
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.items.map((item, index) => (
             <div 
               key={index}
-              className="bg-white p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-start relative group cursor-pointer"
+              className="bg-white p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-start relative group cursor-pointer"
             >
               {/* Top Row: Icon and Arrow */}
-              <div className="w-full flex justify-between items-start mb-8">
+              <div className="w-full flex justify-between items-start mb-6 md:mb-8">
                 <div className="text-gray-800">
                   {iconMap[item.icon] || <Settings size={30} strokeWidth={1.5} />}
                 </div>
-                <div className="text-black group-hover:text-gray-900 transition-colors">
+
+                <Link
+                  href="/services"
+                  className="text-black group-hover:text-gray-900 transition-colors"
+                >
                   <ArrowUpRight size={24} strokeWidth={1.5} />
-                </div>
+                </Link>
               </div>
 
               {/* Text Content */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
                 {item.title}
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed">

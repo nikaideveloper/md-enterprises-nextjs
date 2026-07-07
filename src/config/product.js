@@ -41,140 +41,189 @@ export const productsPageData = {
     label: "MACHINE CATEGORIES",
     title: "Browse By Machine Type",
     items: [
-      {
+       {
         id: 1,
-        title: "Baby band sealing machine with Nitrogen gas flushing system",
-        image: "/images/baby-band-nitrogen.png",
-        alt: "Baby band",
+        title: "Baby Band Sealing Machine",
+        image: "/images/machines/baby-band-vertical.jpeg",
+        alt: "Baby band vertical",
       },
       {
         id: 2,
-        title: "Maxi heavy duty band sealing machine vertical type",
-        image: "/images/maxi-heavy-duty-vertical.png",
-        alt: "Maxi heavy",
+        title: "Maxi Band Sealing Machine",
+        image: "/images/machines/maxi-band-vertical.jpeg",
+        alt: "Maxi band vertical",
+        
       },
-      {
+        {
         id: 3,
-        title: "Baby band sealing machine horizontal type",
-        image: "/images/baby-band-horizontal.png",
-        alt: "Baby band horizontal",
+        title: "Maxi Heavy Duty Band Sealing Machine",
+        image: "/images/machines/maxi-heavy-vertical.jpeg",
+        alt: "Maxi heavy duty vertical",
       },
-      {
+       {
         id: 4,
-        title: "Foot Operator impulse sealing machine",
-        image: "/images/foot-operator-impulse.png",
-        alt: "Foot Operator",
+        title: "Auto Impulse Sealing Machine",
+        image: "/images/machines/auto-impulse-vertical.jpeg",
+        alt: "Auto Impulse vertical",
       },
-      {
+        {
         id: 5,
-        title: "Cap sealing machine",
-        image: "/images/cap-sealing-machine2.png",
-        alt: "Cap sealing",
+        title:
+          "Foot Operated Impulse Sealing Machine",
+        image: "/images/machines/foot-operated-impulse.jpeg",
+        alt: "Foot operated impulse",
       },
+
     ],
   },
   productDetails: {
-    1: {
+       1: {
       id: 1,
-      title: "Baby band sealing machine with Nitrogen gas flushing system",
+      title: "Baby Band Sealing Machine",
       description:
-        "Continuous band sealing machine with nitrogen gas flushing system ensures strong, air-tight sealing with extended product shelf life.",
+        "This Vertical Baby Band Sealing Machine comes equipped with an integrated Nitrogen Gas flushing system. Designed specifically for vertical pouch orientation, it prevents spillage of powders, liquids, and grains while simultaneously replacing oxygen with nitrogen. This ensures an airtight seal that significantly extends the shelf life of perishable items like snacks, coffee, and dry fruits.",
       images: [
-        { id: 1, url: "/images/baby-band-nitrogen.png", alt: "View 1" },
+              { id: 1, url: "/images/machines/baby-band-vertical.jpeg", alt: "View 1" },
         { id: 2, url: "/images/baby-band-horizontal.png", alt: "View 2" },
-        { id: 3, url: "/images/maxi-heavy-duty-vertical.png", alt: "View 3" },
-        { id: 4, url: "/images/cap-sealing-machine2.png", alt: "View 4" },
-      ],
-      keyFeatures: [
-        "Stainless steel body",
-        "Nitrogen gas flushing",
-        "Digital temperature",
-        "Continuous sealing",
+        { id: 3, url: "/images/machines/baby-band-vertical-standard.jpeg", alt: "View 3" },
+        { id: 4, url: "/images/machines/baby-band-vertical-heavy.jpeg", alt: "View 4" },
+         { id: 5, url: "/images/machines/baby-band-horizontal-nitrogen.jpeg", alt: "View 5" },
+          { id: 6, url: "/images/machines/baby-band-vertical-nitrogen.jpeg", alt: "View 6" },
       ],
       specifications: {
-        model: "MDE-BS-100",
-        power: "750W",
-        conveyorSpeed: "0-12 m/min",
-        machineSize: "950×420×380mm",
-        voltage: "220V",
-        sealingWidth: "8-12mm",
-        temperatureRange: "0-300°C",
-        machineWeight: "60 KG",
+        type: "Vertical Continuous Band Sealer",
+        model: "BB-V-N2",
+        body: "Standard",
+        fabrication: "MS/SS body options available",
+        power: "230V AC Single Phase, 50Hz",
+        machineWeight: "35 KG",
+        sealingWidth: "8-10 mm",
+        conveyorLoadCapacity: "Up to 3 KG",
+        temperatureControl: "Digital PID Controller (0-300°C)",
+        nitrogenGasFlushing: "Built-in / Standard",
+        productionSealingSpeed: "0 - 12 M/min (Variable)",
+        printingSystem: "Embossing / Solid Ink Printing (Optional)",
       },
       buttons: {
         primary: { text: "Send Inquiry" },
         secondary: { text: "Get Quotation" },
       },
     },
-    // Add dummy entries for 2, 3, 4, 5 to prevent errors
     2: {
       id: 2,
-      title: "Maxi heavy duty band sealing machine",
-      description: "Heavy duty version...",
+      title: "Maxi Band Sealing Machine",
+      description:
+        "The Maxy Continuous Band Sealing Machine is specially designed for heavy-duty industrial packaging applications. It provides continuous, efficient, and reliable sealing for medium and large-sized pouches. With a robust MS fabricated body, precision mechanical parts, and adjustable conveyor system, it delivers excellent sealing performance for food, chemical, pharmaceutical, and manufacturing industries.",
       images: [
-        { id: 1, url: "/images/baby-band-nitrogen.png", alt: "View 1" },
-        { id: 2, url: "/images/baby-band-horizontal.png", alt: "View 2" },
-        { id: 3, url: "/images/maxi-heavy-duty-vertical.png", alt: "View 3" },
-        { id: 4, url: "/images/cap-sealing-machine2.png", alt: "View 4" },
+        { id: 1, url: "/images/machines/maxi-band-vertical.jpeg", alt: "View 1" },
       ],
-      keyFeatures: ["Heavy duty"],
-      specifications: { model: "MAXI-100", power: "1000W" },
+      specifications: {
+        type: "Vertical",
+        model: "MD-MBS-501",
+        body: "Heavy Duty",
+        fabrication: "MS body fabrication with powder coating",
+        mechanicalParts: "MS Grade Steel Mechanical Parts",
+        power: "230V AC Single Phase, 50Hz",
+        machineWeight: "75 KG",
+        sealingWidth: "10-15 mm",
+        conveyorLoadCapacity: "100g - 5kg",
+        conveyorHeightAdjustment: "4 inch - 18 inch",
+        variableSpeed: "Available (Optional)",
+        nitrogenGasFlushing: "Available (Optional)",
+        productionSealingSpeed: "8 M/min",
+        counterSystem: "Available (Optional)",
+      },
       buttons: {
         primary: { text: "Send Inquiry" },
         secondary: { text: "Get Quotation" },
       },
     },
-    3: {
+
+3: {
       id: 3,
-      title: "Baby band sealing machine horizontal",
-      description: "Horizontal type...",
+      title: "Maxi Heavy Duty Band Sealing Machine", 
+      description:
+        "The Maxy Continuous Band Sealing Machine is specially designed for heavy-duty industrial packaging applications. It provides continuous, efficient, and reliable sealing for medium and large-sized pouches. With a robust MS fabricated body, precision mechanical parts, and adjustable conveyor system, it delivers excellent sealing performance for food, chemical, pharmaceutical, and manufacturing industries.",
       images: [
-        { id: 1, url: "/images/baby-band-nitrogen.png", alt: "View 1" },
-        { id: 2, url: "/images/baby-band-horizontal.png", alt: "View 2" },
-        { id: 3, url: "/images/maxi-heavy-duty-vertical.png", alt: "View 3" },
-        { id: 4, url: "/images/cap-sealing-machine2.png", alt: "View 4" },
+          { id: 1, url: "/images/machines/maxi-heavy-vertical.jpeg", alt : "View 1" },
+        { id: 2, url: "/images/machines/maxi-heavy-horizontal.jpeg", alt: "View 2" },
+        { id: 3, url: "/images/machines/maxi-heavy-jambo.jpeg", alt: "View 3" },
       ],
-      keyFeatures: ["Horizontal"],
-      specifications: { model: "HORIZ-100", power: "500W" },
+      specifications: {
+        type: "Horizontal",
+        model: "MD-MBS-501",
+        body: "Heavy Duty",
+        fabrication: "MS body fabrication with powder coating",
+        mechanicalParts: "MS Grade Steel Mechanical Parts",
+        power: "230V AC Single Phase, 50Hz",
+        machineWeight: "75 KG",
+        sealingWidth: "10-15 mm",
+        conveyorLoadCapacity: "100g - 5kg",
+        conveyorHeightAdjustment: "4 inch - 18 inch",
+        variableSpeed: "Available (Optional)",
+        nitrogenGasFlushing: "Available (Optional)",
+        productionSealingSpeed: "8 M/min",
+        counterSystem: "Available (Optional)",
+      },
       buttons: {
         primary: { text: "Send Inquiry" },
         secondary: { text: "Get Quotation" },
       },
     },
-    4: {
+  4: {
       id: 4,
-      title: "Foot Operator impulse sealing",
-      description: "Manual operation...",
+      title: "Auto Impulse Sealing Machine",
+      description:
+        "The Vertical Auto Impulse Sealing Machine is designed for high-precision heat sealing of thermoplastic bags. By operating vertically, it safely seals bags filled with free-flowing liquids or powders. It features an automated timer-controlled electromagnet that closes the sealing jaws, reducing operator fatigue and increasing packaging uniformity.",
       images: [
-        { id: 1, url: "/images/baby-band-nitrogen.png", alt: "View 1" },
-        { id: 2, url: "/images/baby-band-horizontal.png", alt: "View 2" },
-        { id: 3, url: "/images/maxi-heavy-duty-vertical.png", alt: "View 3" },
-        { id: 4, url: "/images/cap-sealing-machine2.png", alt: "View 4" },
+             { id: 1, url: "/images/machines/auto-impulse-vertical.jpeg", alt: "View 1" },
+        { id: 2, url: "/images/machines/auto-impulse-horizontal.jpeg", alt: "View 2" },
+   
+      
       ],
-      keyFeatures: ["Foot pedal"],
-      specifications: { model: "FOOT-100", power: "300W" },
+      specifications: {
+        type: "Vertical Auto Impulse",
+        model: "AIS-V-400",
+        operationMode: "Auto / Manual (Foot Pedal)",
+        power: "230V AC Single Phase, 50Hz",
+        machineWeight: "25 KG",
+        sealingLength: "Up to 400 mm",
+        sealingWidth: "3-5 mm",
+        heatingTime: "0.2 - 2.5 Seconds (Adjustable)",
+        coolingTime: "Adjustable",
+        suitableMaterials: "PE, PP, LDPE, Laminated Films",
+      },
       buttons: {
         primary: { text: "Send Inquiry" },
         secondary: { text: "Get Quotation" },
       },
     },
-    5: {
+
+   5: {
       id: 5,
-      title: "Cap sealing machine",
-      description: "For bottles and caps...",
+      title: "Foot Operated Impulse Sealing Machine",
+      description:
+        "The Foot Operated Impulse Sealing Machine is designed for efficient manual sealing of plastic and laminated pouches. Operated using a foot pedal, it provides strong, uniform seals with adjustable sealing time. It is suitable for food, pharmaceutical, textile, and industrial packaging applications.",
       images: [
-        { id: 1, url: "/images/baby-band-nitrogen.png", alt: "View 1" },
-        { id: 2, url: "/images/baby-band-horizontal.png", alt: "View 2" },
-        { id: 3, url: "/images/maxi-heavy-duty-vertical.png", alt: "View 3" },
-        { id: 4, url: "/images/cap-sealing-machine2.png", alt: "View 4" },
+        { id: 1, url: "/images/machines/foot-operated-impulse.jpeg", alt: "View 1" },
+        { id: 2, url: "/images/machines/foot-operated-impulse.jpeg", alt: "View 2" },
       ],
-      keyFeatures: ["Induction sealing"],
-      specifications: { model: "CAP-100", power: "400W" },
+      specifications: {
+        model: "MD-FS-400",
+        sealingLength: "400 mm",
+        sealingWidth: "5 mm",
+        power: "500W",
+        voltage: "230V AC Single Phase",
+        operation: "Foot Operated",
+        body: "Heavy Duty MS Body",
+        machineWeight: "25 KG",
+      },
       buttons: {
         primary: { text: "Send Inquiry" },
         secondary: { text: "Get Quotation" },
       },
     },
+
   },
 
   faqs: {
@@ -243,16 +292,48 @@ export const productsPageData = {
   videoDemo: {
     label: "MACHINE DEMONSTRATION",
     title: "Precision Sealing In Action",
-    description: "Watch how our automated packaging solutions streamline production lines with high-speed accuracy.",
-    
+    description:
+      "Watch how our automated packaging solutions streamline production lines with high-speed accuracy.",
+
     // YouTube Data
-    videoUrl: "https://www.youtube.com/embed/pilA_j0qL0c", 
+    videoUrl: "https://www.youtube.com/embed/pilA_j0qL0c",
     videoThumbnail: "https://img.youtube.com/vi/pilA_j0qL0c/maxresdefault.jpg",
-    
+
     button: {
       text: "Get Technical Specs",
       link: "/contact",
     },
   },
 
+    otherSolutions: {
+    title: "WE ALSO MANUFACTURE",
+    description: "Explore our wide range of high-performance packaging machines built for every industry.",
+    // Using icon names from Lucide React
+    badgeIcon: "Award", 
+    
+    items: [
+      {
+        id: 1,
+        title: "Hand Operate Machine",
+        subTitle: "Size 8/12/16 inch",
+        link: "/products/hand-operated",
+        iconName: "Hand", 
+      },
+      {
+        id: 2,
+        title: "Pneumatic Heavy Duty",
+        subTitle: "Size 4-50 inch | 3-10mm width",
+        link: "/products/pneumatic-heavy-duty",
+        iconName: "Zap", 
+      },
+      {
+        id: 3,
+        title: "Vacuum Pack Machine",
+        subTitle: "Industrial Grade Sealing",
+        link: "/products/vacuum-pack",
+        iconName: "Wind", 
+      },
+      
+    ],
+  },
 };

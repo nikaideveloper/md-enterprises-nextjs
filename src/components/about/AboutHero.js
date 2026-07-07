@@ -1,6 +1,6 @@
 import React from 'react';
 import { aboutPageData } from '@/config/about';
-
+import Link from "next/link";
 export default function AboutHero() {
   const { hero } = aboutPageData;
 
@@ -8,7 +8,7 @@ export default function AboutHero() {
     <section className="relative w-full overflow-hidden bg-[#f2f1f2]">
       {/* Container: Stays flex-col for mobile, flex-row for desktop */}
       <div className="mx-5 flex flex-col lg:flex-row items-center">
-        
+
         {/* Left Content Side */}
         {/* Mobile: py-10 | Desktop: lg:py-8 (as per your original) */}
         <div className="w-full lg:w-1/2 px-6 py-10 md:px-8 lg:py-8 z-10 order-2 lg:order-1">
@@ -38,12 +38,19 @@ export default function AboutHero() {
 
             {/* Buttons: Stacked on mobile, side-by-side (flex-wrap) on desktop */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
-              <button className="bg-[#1a3636] text-white px-8 py-3 rounded-md font-medium shadow-lg hover:bg-opacity-90 transition-all w-full sm:w-auto">
+              <Link
+                href="/products"
+                className="bg-[#1a3636] text-white px-8 py-3 rounded-md font-medium shadow-lg hover:bg-opacity-90 transition-all w-full sm:w-auto inline-flex items-center justify-center"
+              >
                 {hero.buttons.primary}
-              </button>
-              <button className="bg-white text-black border border-gray-200 px-8 py-3 rounded-md font-medium shadow-md hover:bg-gray-50 transition-all w-full sm:w-auto">
+              </Link>
+
+              <Link
+                href="/contact"
+                className="bg-white text-black border border-gray-200 px-8 py-3 rounded-md font-medium shadow-md hover:bg-gray-50 transition-all w-full sm:w-auto inline-flex items-center justify-center"
+              >
                 {hero.buttons.secondary}
-              </button>
+              </Link>
             </div>
           </div>
         </div>

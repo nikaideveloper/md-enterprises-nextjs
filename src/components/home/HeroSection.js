@@ -1,18 +1,18 @@
 "use client";
-
+import Link from 'next/link';
 import { motion, AnimatePresence } from "framer-motion";
 import { homePageData } from "@/config/home";
 import Image from "next/image";
-import { 
-  Gauge, Target, Wrench, Zap, 
-  Youtube, X, Loader2, Mic, Video, PhoneOff, UserPlus, MoreHorizontal 
+import {
+  Gauge, Target, Wrench, Zap,
+  Youtube, X, Loader2, Mic, Video, PhoneOff, UserPlus, MoreHorizontal
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function HeroSection() {
   const { hero } = homePageData;
   const [isMobile, setIsMobile] = useState(false);
-  
+
   // Modal States
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -46,9 +46,9 @@ export default function HeroSection() {
     <section className="bg-primary pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-8 sm:pb-10 md:pb-12 lg:pb-14 px-4 overflow-hidden relative">
       <div className="container mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 md:gap-10 lg:gap-12">
-          
+
           {/* Left Side: Content */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -57,18 +57,21 @@ export default function HeroSection() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               {hero.title}
             </h1>
-            
+
             <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-lg leading-relaxed">
               {hero.subtitle}
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <button className="bg-white text-black font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-md hover:bg-gray-100 active:scale-95 transition-all shadow-lg text-sm sm:text-base w-full sm:w-auto">
+              <Link
+                href="/products"
+                className="bg-white text-black font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-md hover:bg-gray-100 active:scale-95 transition-all shadow-lg text-sm sm:text-base w-full sm:w-auto inline-flex items-center justify-center"
+              >
                 {hero.buttonText}
-              </button>
+              </Link>
 
               {/* YouTube Trigger Button */}
-              <button 
+              <button
                 onClick={() => setIsOpen(true)}
                 className="flex items-center justify-center gap-3 text-white font-medium px-6 py-2.5 rounded-md border border-white/10 bg-white/5 hover:bg-white/10 transition-all w-full sm:w-auto group"
               >
@@ -95,7 +98,7 @@ export default function HeroSection() {
                     hover:bg-black/40 active:scale-95 transition-all
                     ${isMobile ? 'w-full' : 'w-fit min-w-[140px]'}
                   `}
-                  style={{ 
+                  style={{
                     marginLeft: !isMobile ? `${index * 5}rem` : '0'
                   }}
                 >
@@ -112,16 +115,23 @@ export default function HeroSection() {
         </div>
 
         {/* Bottom Section: Machine Images */}
-        <motion.div 
+
+
+        {/* Bottom Section: Machine Images */}
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6"
         >
           {hero.bottomImages.map((img, idx) => (
-            <div 
-              key={idx} 
-              className="bg-white rounded-2xl sm:rounded-3xl lg:rounded-[2.5rem] p-4 sm:p-6 md:p-8 h-56 sm:h-64 md:h-72 lg:h-80 flex items-center justify-center shadow-2xl relative group overflow-hidden"
+            // 1. Changed div to Link
+            // 2. Added `block` to className so flexbox works properly
+            // 3. Changed ${img.id} to ${idx + 1}
+            <Link
+              key={idx}
+              href={`/products?productId=${idx + 1}`}
+              className="block bg-white rounded-2xl sm:rounded-3xl lg:rounded-[2.5rem] p-4 sm:p-6 md:p-8 h-56 sm:h-64 md:h-72 lg:h-80 flex items-center justify-center shadow-2xl relative group overflow-hidden cursor-pointer"
             >
               <Image
                 src={img.image}
@@ -131,7 +141,7 @@ export default function HeroSection() {
                 className="object-contain p-1 transition-transform duration-500 group-hover:scale-110"
                 priority={idx === 0}
               />
-            </div>
+            </Link>
           ))}
         </motion.div>
       </div>
@@ -139,19 +149,19 @@ export default function HeroSection() {
       {/* --- REFINED VIDEO MODAL (Browser-Style) --- */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-md p-4"
-            onClick={() => setIsOpen(false)} 
+            onClick={() => setIsOpen(false)}
           >
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.9, y: 30, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.9, y: 30, opacity: 0 }}
               className="relative w-full max-w-4xl bg-[#F9FAFB] rounded-[2rem] overflow-hidden shadow-2xl border border-white/20"
-              onClick={(e) => e.stopPropagation()} 
+              onClick={(e) => e.stopPropagation()}
             >
               {/* TOP BROWSER BAR */}
               <div className="bg-white p-4 flex items-center border-b border-gray-100">
@@ -173,7 +183,7 @@ export default function HeroSection() {
                     <Loader2 className="animate-spin text-white/20" size={32} />
                   </div>
                 )}
-                
+
                 <iframe
                   src={`${hero.videoUrl}?autoplay=1&rel=0&modestbranding=1`}
                   title="YouTube Video"

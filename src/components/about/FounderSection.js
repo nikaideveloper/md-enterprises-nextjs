@@ -28,16 +28,15 @@ const FounderSection = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center">
           
           {/* 1. SINGLE IMAGE CONTAINER */}
-          <div className="relative w-full lg:w-6/12 h-[350px] md:h-[450px] shadow-xl">
-            <Image
-              src={founderSection.image}
-              alt={founderSection.name}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-
+         <div className="relative w-full lg:w-6/12 h-[350px] md:h-[450px] shadow-xl">
+ <Image
+  src={founderSection.image}
+  alt={founderSection.name}
+  fill
+  className="object-cover object-[center_10%]" 
+  priority
+/>
+</div>
           {/* 2. OVERLAPPING CONTENT CARD */}
           <div className="w-full lg:w-5/12 lg:-ml-16 mt-[-40px] lg:mt-0 z-20">
             <div className="bg-white p-6 md:p-10 shadow-2xl border-l-4 border-s-primary">

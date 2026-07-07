@@ -8,7 +8,7 @@ export default function ServiceProcess() {
   const { serviceProcess } = servicesPageData;
 
   return (
-    <section className="py-5 bg-[#f8f9fa] overflow-hidden">
+    <section id='services' className="py-5 bg-[#f8f9fa] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         
         {/* Header */}
