@@ -35,12 +35,11 @@ const OtherSolutions = () => {
         <div className="flex flex-wrap justify-center items-center gap-y-4 mb-12">
           {data.items.map((item, index) => (
             <React.Fragment key={item.id}>
-              <p
-                
-                className="text-[#0a2540] font-bold text-sm md:text-base hover:text-[#65a34a] transition-colors px-6"
-              >
-                {item.title} Sealer
-              </p>
+              <div className="bg-slate-50 border-l-4 border-[#65a34a] rounded-r-lg p-5 hover:bg-white hover:shadow-lg transition-all cursor-pointer">
+  <p className="text-[#0a2540] font-bold text-sm md:text-base">
+    {item.title} Sealer
+  </p>
+</div>
 
                  <h2 className="text-3xl md:text-4xl font-bold text-[#0a2540] mb-6 tracking-tight">
           {data.subTitle}

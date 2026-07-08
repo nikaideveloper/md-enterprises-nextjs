@@ -130,7 +130,7 @@ export default function HeroSection() {
             // 3. Changed ${img.id} to ${idx + 1}
             <Link
               key={idx}
-              href={`/products?productId=${idx + 1}`}
+              href={`/products?productId=${idx }`}
               className="block bg-white rounded-2xl sm:rounded-3xl lg:rounded-[2.5rem] p-4 sm:p-6 md:p-8 h-56 sm:h-64 md:h-72 lg:h-80 flex items-center justify-center shadow-2xl relative group overflow-hidden cursor-pointer"
             >
               <Image

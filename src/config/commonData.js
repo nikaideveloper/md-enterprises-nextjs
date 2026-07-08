@@ -26,19 +26,19 @@ export const commonData = {
     // These are typically displayed in the dark green bar
     stats: [
       {
-        number: "300 +",
+        number: "500 +",
         title: "Machines Installed",
         image: "/images/installed-icon.png",
         alt: "Machines Installed",
       },
       {
-        number: "90+",
+        number: "1000+",
         title: "Service Projects",
         image: "/images/service-icon.png",
         alt: "Service Projects",
       },
       {
-        number: "100+",
+        number: "120+",
         title: "Satisfied Clients",
         image: "/images/clients-icon.png",
         alt: "Satisfied Clients",

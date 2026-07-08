@@ -1,12 +1,11 @@
 'use client';
-import React, { useState, useEffect, useRef, Suspense } from 'react'; // Added Suspense import
+import React, { useState, useEffect, useRef, Suspense } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { productsPageData } from '@/config/product';
 import { useSearchParams } from 'next/navigation';
 import Link from "next/link";
 
-// 1. Wrap the actual logic in a separate component
 function ProductShowcaseContent() {
   const [selectedId, setSelectedId] = useState(1);
   const { categories, productDetails } = productsPageData;
@@ -18,6 +17,18 @@ function ProductShowcaseContent() {
   const productInfoRef = useRef(null);
   const scrollContainerRef = useRef(null);
   const [activeImage, setActiveImage] = useState('');
+
+  // --- ADDED SCROLL FUNCTION ---
+  const scroll = (direction) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 300; // How many pixels to scroll per click
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+  // -----------------------------
 
   useEffect(() => {
     if (productIdParam) {
@@ -88,6 +99,24 @@ function ProductShowcaseContent() {
                 </div>
               </div>
             ))}
+          </div>
+          
+          <div className="flex justify-center items-center gap-4 mt-0">
+            <button
+              onClick={() => scroll('left')}
+              className="bg-white border border-gray-200 p-3 rounded-full hover:bg-[#0f4c4c] hover:text-white transition-all shadow-sm active:scale-95"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <div className="h-1 w-20 bg-gray-200 rounded-full overflow-hidden">
+              <div className="h-full bg-[#0f4c4c] w-1/3 animate-pulse"></div>
+            </div>
+            <button
+              onClick={() => scroll('right')}
+              className="bg-white border border-gray-200 p-3 rounded-full hover:bg-[#0f4c4c] hover:text-white transition-all shadow-sm active:scale-95"
+            >
+              <ChevronRight size={20} />
+            </button>
           </div>
         </div>
       </section>
@@ -173,7 +202,6 @@ function ProductShowcaseContent() {
   );
 }
 
-// 2. Export a wrapper component with Suspense
 export default function ProductShowcase() {
   return (
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading Products...</div>}>

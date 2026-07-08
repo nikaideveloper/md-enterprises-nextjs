@@ -12,11 +12,7 @@ export const homePageData = {
     highlights: ["Speed", "Precision", "Customize", "Efficiency"],
 
     bottomImages: [
-      {
-        image: "/images/Packaging-Machine-1.png",
-        alt: "Packaging Machine 1",
-      
-      },
+   
       {
         image: "/images/Packaging-Machine-2.png",
         alt: "Packaging Machine 2",
@@ -26,6 +22,11 @@ export const homePageData = {
         image: "/images/Packaging-Machine-3.png",
         alt: "Conveyor Packaging Machine",
         
+      },
+         {
+        image: "/images/Packaging-Machine-1.png",
+        alt: "Packaging Machine 1",
+      
       },
     ],
   },
@@ -82,13 +83,13 @@ export const homePageData = {
 
     stats: [
       {
-        number: "300+",
+        number: "500+",
         title: "Machines Installed",
         description:
           "Successfully delivering packaging systems for various industrial applications.",
       },
       {
-        number: "90+",
+        number: "1000+",
         title: "Service Projects",
         description:
           "Completed repair and maintenance projects with dependable support.",

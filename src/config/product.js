@@ -44,7 +44,7 @@ export const productsPageData = {
        {
         id: 1,
         title: "Baby Band Sealing Machine",
-        image: "/images/machines/baby-band-vertical.jpeg",
+        image: "/images/machines/baby-band-vertical-nitrogen.jpeg",
         alt: "Baby band vertical",
       },
       {
@@ -73,7 +73,22 @@ export const productsPageData = {
         image: "/images/machines/foot-operated-impulse.jpeg",
         alt: "Foot operated impulse",
       },
+{
+        id: 6,
+        title:
+          "Foot Operated Direct Heat Sealing Machine",
+        image: "/images/machines/oot-operated-direct-heat.jpeg",
+        alt: "Foot Operated Direct Heat Sealing Machine",
+      },
 
+{
+        id: 7,
+        title:
+          "Auto Direct Heat Sealing Machine",
+        image: " /images/machines/auto-impulse-horizontal.jpeg",
+        alt: "Auto Direct Heat Sealing Machine",
+      },
+ 
     ],
   },
   productDetails: {
@@ -83,12 +98,12 @@ export const productsPageData = {
       description:
         "This Vertical Baby Band Sealing Machine comes equipped with an integrated Nitrogen Gas flushing system. Designed specifically for vertical pouch orientation, it prevents spillage of powders, liquids, and grains while simultaneously replacing oxygen with nitrogen. This ensures an airtight seal that significantly extends the shelf life of perishable items like snacks, coffee, and dry fruits.",
       images: [
-              { id: 1, url: "/images/machines/baby-band-vertical.jpeg", alt: "View 1" },
+                  { id: 1, url: "/images/machines/baby-band-vertical-nitrogen.jpeg", alt: "View 1" },
         { id: 2, url: "/images/baby-band-horizontal.png", alt: "View 2" },
         { id: 3, url: "/images/machines/baby-band-vertical-standard.jpeg", alt: "View 3" },
         { id: 4, url: "/images/machines/baby-band-vertical-heavy.jpeg", alt: "View 4" },
          { id: 5, url: "/images/machines/baby-band-horizontal-nitrogen.jpeg", alt: "View 5" },
-          { id: 6, url: "/images/machines/baby-band-vertical-nitrogen.jpeg", alt: "View 6" },
+              { id: 6, url: "/images/machines/baby-band-vertical.jpeg", alt: "View 6" },
       ],
       specifications: {
         type: "Vertical Continuous Band Sealer",
@@ -177,7 +192,7 @@ export const productsPageData = {
         "The Vertical Auto Impulse Sealing Machine is designed for high-precision heat sealing of thermoplastic bags. By operating vertically, it safely seals bags filled with free-flowing liquids or powders. It features an automated timer-controlled electromagnet that closes the sealing jaws, reducing operator fatigue and increasing packaging uniformity.",
       images: [
              { id: 1, url: "/images/machines/auto-impulse-vertical.jpeg", alt: "View 1" },
-        { id: 2, url: "/images/machines/auto-impulse-horizontal.jpeg", alt: "View 2" },
+
    
       
       ],
@@ -206,7 +221,7 @@ export const productsPageData = {
         "The Foot Operated Impulse Sealing Machine is designed for efficient manual sealing of plastic and laminated pouches. Operated using a foot pedal, it provides strong, uniform seals with adjustable sealing time. It is suitable for food, pharmaceutical, textile, and industrial packaging applications.",
       images: [
         { id: 1, url: "/images/machines/foot-operated-impulse.jpeg", alt: "View 1" },
-        { id: 2, url: "/images/machines/foot-operated-impulse.jpeg", alt: "View 2" },
+        // { id: 2, url: "/images/machines/foot-operated-impulse.jpeg", alt: "View 2" },
       ],
       specifications: {
         model: "MD-FS-400",
@@ -224,6 +239,69 @@ export const productsPageData = {
       },
     },
 
+    6: {
+  id: 6,
+  title: "Foot Operated Direct Heat Sealing Machine",
+  description:
+    "The Foot Operated Direct Heat Sealing Machine is built for sealing thick and laminated packaging materials with strong, consistent results. Featuring hands-free foot pedal operation and a heavy-duty MS fabricated body, it ensures reliable performance, durability, and ease of use. It is ideal for food, pharmaceutical, chemical, textile, and industrial packaging applications requiring secure and long-lasting seals.",
+  images: [
+    {
+      id: 1,
+      url: "/images/machines/oot-operated-direct-heat.jpeg",
+      alt: "Foot Operated Direct Heat Sealing Machine",
+    },
+    // {
+    //   id: 2,
+    //   url: "/images/machines/foot-operated-direct-heat.jpeg",
+    //   alt: "View 2",
+    // },
+  ],
+  specifications: {
+    model: "MD-FDS-102",
+    availableSizes: "8 Inch / 12 Inch / 16 Inch / 20 Inch",
+    sealingWidth: "15 mm",
+    productionSpeed: "10-15 Pouch/min",
+    body: "Heavy Duty MS Body with Powder Coating",
+    mechanicalParts: "MS Grade Steel Mechanical Parts",
+    power: "230V AC Single Phase, 50 Hz",
+    operation: "Foot Operated",
+    machineWeight: "20 KG",
+  },
+  buttons: {
+    primary: { text: "Send Inquiry" },
+    secondary: { text: "Get Quotation" },
+  },
+},
+7: {
+  id: 7,
+  title: "Auto Direct Heat Sealing Machine",
+  description:
+    "The Auto Direct Heat Sealing Machine delivers automatic, high-quality sealing for thick and laminated packaging materials. Featuring a durable powder-coated MS body and precision-engineered mechanical components, it ensures consistent performance, reliable operation, and strong seals. It is an ideal solution for food, pharmaceutical, chemical, textile, and industrial packaging applications, helping improve productivity and packaging efficiency.",
+  images: [
+ 
+            { id: 1, url: "/images/machines/auto-impulse-horizontal.jpeg", alt: "View 1" },
+    // {
+    //   id: 2,
+    //   url: "/images/machines/auto-direct-heat.jpeg",
+    //   alt: "View 2",
+    // },
+  ],
+  specifications: {
+    model: "MD-ADS-104",
+    availableSizes: "8 Inch / 12 Inch / 16 Inch / 20 Inch",
+    sealingWidth: "15 mm",
+    productionSpeed: "10-20 Pouch/min",
+    body: "Heavy Duty MS Body with Powder Coating",
+    mechanicalParts: "MS Grade Steel Mechanical Parts",
+    power: "230V AC Single Phase, 50 Hz",
+    operation: "Automatic",
+    machineWeight: "20-35 KG (Depending on Size)",
+  },
+  buttons: {
+    primary: { text: "Send Inquiry" },
+    secondary: { text: "Get Quotation" },
+  },
+},
   },
 
   faqs: {
