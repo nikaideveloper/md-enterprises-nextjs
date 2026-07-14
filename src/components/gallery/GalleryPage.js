@@ -27,7 +27,7 @@ const GalleryPage = () => {
   };
 
   return (
-    <section className="bg-[#f2f2eb] py-10 px-4 md:px-10 min-h-screen">
+    <section className="bg-[#ffff] py-10 px-4 md:px-10 min-h-screen">
       <div className="max-w-[1440px] mx-auto">
         
         {/* Page Header */}

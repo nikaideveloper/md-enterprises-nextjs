@@ -16,7 +16,7 @@ const FounderSection = () => {
       </div>
 
       <div className="container mx-auto px-4 max-w-5xl relative z-10">
-        
+
         {/* SECTION HEADING */}
         <div className="text-center mb-2 md:mb-6">
           <span className=" text-[#a5d332] font-bold text-sm md:text-base tracking-wider uppercase mb-3 block text-xs font-bold uppercase tracking-[0.3em] block mb-3">
@@ -26,17 +26,18 @@ const FounderSection = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center justify-center">
-          
-      {/* 1. SINGLE IMAGE CONTAINER */}
-<div className="relative w-full lg:w-6/12 h-[400px] md:h-[400px] shadow-xl bg-white">
-  <Image
-    src={founderSection.image}
-    alt={founderSection.name}
-    fill
-    className="object-contain" // Changed from object-cover to object-contain
-    priority
-  />
-</div>
+
+          <div className="w-full lg:w-6/13 flex justify-center">
+            <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-xl bg-white border-4 border-gray-100">
+              <Image
+                src={founderSection.image}
+                alt={founderSection.name}
+                fill
+                className="object-contain "
+                priority
+              />
+            </div>
+          </div>
           {/* 2. OVERLAPPING CONTENT CARD */}
           <div className="w-full lg:w-5/12 lg:-ml-16 mt-[-40px] lg:mt-0 z-20">
             <div className="bg-white p-6 md:p-10 shadow-2xl border-l-4 border-s-primary">

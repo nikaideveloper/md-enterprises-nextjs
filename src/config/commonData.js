@@ -38,7 +38,7 @@ export const commonData = {
         alt: "Service Projects",
       },
       {
-        number: "120+",
+        number: "5000+",
         title: "Satisfied Clients",
         image: "/images/clients-icon.png",
         alt: "Satisfied Clients",

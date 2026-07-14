@@ -23,7 +23,7 @@ export default function CompanyOverview() {
               <img
                 src={companyOverview.images[1].image}
                 alt={companyOverview.images[1].alt}
-                className=" object-contain p-2"
+                className=" object-contain pt-6 p-1"
               />
             </div>
           </div>

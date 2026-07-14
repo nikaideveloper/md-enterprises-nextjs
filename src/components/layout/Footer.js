@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 
 // Import Social Icons from react-icons
-import { FaFacebookF, FaInstagram, FaWhatsapp,FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   const { company, products, services, quickLinks, contact, socialLinks, copyright } = footerData;
@@ -105,18 +105,32 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
             <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <a 
-                  key={index} 
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white hover:text-[#0a3d3d] transition-all duration-300"
-                  aria-label={social.name}
-                >
-                  {iconMap[social.name]}
-                </a>
-              ))}
+              {socialLinks.map((social, index) => {
+                
+                // --- WHATSAPP LOGIC START ---
+                let finalHref = social.href;
+                if (social.name === "WhatsApp") {
+                  // Use the first phone number from contact list
+                  // .replace(/\D/g, "") removes all non-numeric characters (+, -, spaces)
+                  const cleanPhone = contact.phones[0].replace(/\D/g, "");
+                  const message = encodeURIComponent("Hello! I would like to inquire about your products.");
+                  finalHref = `https://wa.me/${cleanPhone}?text=${message}`;
+                }
+                // --- WHATSAPP LOGIC END ---
+
+                return (
+                  <a 
+                    key={index} 
+                    href={finalHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white hover:text-[#0a3d3d] transition-all duration-300"
+                    aria-label={social.name}
+                  >
+                    {iconMap[social.name]}
+                  </a>
+                );
+              })}
             </div>
           </div>
 

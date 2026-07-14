@@ -15,17 +15,17 @@ export const homePageData = {
    
       {
         image: "/images/Packaging-Machine-2.png",
-        alt: "Packaging Machine 2",
+        alt: "Baby band sealing machine vartical type with Nitrogen Gas flushing system",
         
       },
       {
         image: "/images/Packaging-Machine-3.png",
-        alt: "Conveyor Packaging Machine",
+        alt: "Baby band sealing machine horizontal type",
         
       },
          {
         image: "/images/Packaging-Machine-1.png",
-        alt: "Packaging Machine 1",
+        alt: "Maxi band sealing machine vartical type",
       
       },
     ],

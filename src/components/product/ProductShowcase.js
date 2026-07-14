@@ -155,7 +155,7 @@ function ProductShowcaseContent() {
                   {product.buttons.primary.text}
                 </button>
               </Link>
-              <Link href="/contact">
+              <Link href="/inquiry-now">
                 <button className="bg-white text-gray-700 border border-gray-200 px-10 py-4 rounded-lg font-bold hover:bg-gray-50 transition-all text-sm uppercase tracking-wider">
                   {product.buttons.secondary.text}
                 </button>

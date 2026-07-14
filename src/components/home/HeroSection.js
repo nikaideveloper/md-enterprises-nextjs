@@ -124,25 +124,35 @@ export default function HeroSection() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6"
         >
-          {hero.bottomImages.map((img, idx) => (
-            // 1. Changed div to Link
-            // 2. Added `block` to className so flexbox works properly
-            // 3. Changed ${img.id} to ${idx + 1}
-            <Link
-              key={idx}
-              href={`/products?productId=${idx }`}
-              className="block bg-white rounded-2xl sm:rounded-3xl lg:rounded-[2.5rem] p-4 sm:p-6 md:p-8 h-56 sm:h-64 md:h-72 lg:h-80 flex items-center justify-center shadow-2xl relative group overflow-hidden cursor-pointer"
-            >
-              <Image
-                src={img.image}
-                alt={img.alt}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-contain p-1 transition-transform duration-500 group-hover:scale-110"
-                priority={idx === 0}
-              />
-            </Link>
-          ))}
+        {hero.bottomImages.map((img, idx) => (
+  <Link
+    key={idx}
+    // Logic: idx 0 -> 1, idx 1 -> 1, idx 2 -> 2
+    href={`/products?productId=${Math.max(1, idx)}`}
+    className="block bg-white rounded-2xl sm:rounded-3xl lg:rounded-[2.5rem] p-4 sm:p-6 md:p-8 h-56 sm:h-64 md:h-72 lg:h-80 flex items-center justify-center shadow-2xl relative group overflow-hidden cursor-pointer"
+  >
+    {/* 1. THE IMAGE */}
+    <Image
+      src={img.image}
+      alt={img.alt}
+      fill
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      className="object-contain p-6 transition-transform duration-700 group-hover:scale-110"
+      priority={idx === 0}
+    />
+
+    {/* 2. HOVER OVERLAY */}
+    <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center p-4">
+      {/* 3. TITLE TEXT WITH SLIDE-UP ANIMATION */}
+      <div className="text-center transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+        <h3 className="text-white font-serif font-bold text-lg md:text-xl lg:text-2xl drop-shadow-md">
+          {img.title || img.alt}
+        </h3>
+        <div className="w-8 h-[2px] bg-[#C6FF71] mx-auto mt-2 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 delay-100"></div>
+      </div>
+    </div>
+  </Link>
+))}
         </motion.div>
       </div>
 

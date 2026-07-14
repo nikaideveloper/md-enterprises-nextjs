@@ -8,6 +8,16 @@ import { headerData } from "@/config/header";
 
 export default function Header() {
   const { topBar, logo, navigation, inquiryButton, socialLinks } = headerData;
+
+
+  // Helper to format WhatsApp URL
+  const getWhatsAppLink = (originalHref) => {
+    // We take the phone number from topBar.phone1 
+    // and remove spaces, plus signs, and dashes
+    const cleanPhone = topBar.phone1.replace(/\D/g, "");
+    const message = encodeURIComponent("Hello! I would like to inquire about your products.");
+    return `https://wa.me/${cleanPhone}?text=${message}`;
+  };
   
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -60,20 +70,21 @@ export default function Header() {
             </div>
 
             {/* RIGHT SIDE: Social Links */}
-            <div className="flex items-center gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#C6FF71] transition-colors p-1"
-                  aria-label={social.name}
-                >
-                  {renderSocialIcon(social.name)}
-                </a>
-              ))}
-            </div>
+<div className="flex items-center gap-4">
+  {socialLinks.map((social) => (
+    <a
+      key={social.name}
+      // Check if it's WhatsApp, if so, use the custom link logic
+      href={social.name === "WhatsApp" ? getWhatsAppLink(social.href) : social.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-[#C6FF71] transition-colors p-1"
+      aria-label={social.name}
+    >
+      {renderSocialIcon(social.name)}
+    </a>
+  ))}
+</div>
           </div>
         </div>
 
@@ -168,13 +179,20 @@ export default function Header() {
                 </div>
 
                 {/* Mobile Social Links */}
-                <div className="flex items-center gap-5 px-4 pt-2">
-                  {socialLinks.map((social) => (
-                    <a key={social.name} href={social.href} className="text-[#114232] hover:text-green-700">
-                      {renderSocialIcon(social.name)}
-                    </a>
-                  ))}
-                </div>
+                {/* Mobile Social Links */}
+<div className="flex items-center gap-5 px-4 pt-2">
+  {socialLinks.map((social) => (
+    <a 
+      key={social.name} 
+      href={social.name === "WhatsApp" ? getWhatsAppLink(social.href) : social.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#114232] hover:text-green-700"
+    >
+      {renderSocialIcon(social.name)}
+    </a>
+  ))}
+</div>
               </div>
             </nav>
           </div>

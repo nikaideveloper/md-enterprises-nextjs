@@ -12,7 +12,7 @@ export const productsPageData = {
       },
       secondary: {
         text: "Get Quotation",
-        link: "/contact",
+        link: "/inquiry-now",
       },
     },
     // Featured products shown on the right side of the hero

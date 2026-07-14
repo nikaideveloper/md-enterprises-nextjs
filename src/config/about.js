@@ -37,7 +37,7 @@ export const aboutPageData = {
         alt: "Packaging Machine View 1",
       },
       {
-        image: "/images/overview-machine-12.png", 
+        image: "/image/overview-machine-112.jpg", 
         alt: "Packaging Machine Detail View",
       },
       {
